@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactComponent } from './contact-section/pages/contact/contact.component';
 import { LayoutComponent } from './main/layout/layout.component';
+import { LayoutContactComponent } from './contact-section/pages/layout/layout.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: LayoutContactComponent
   },
   {
     path: '',

@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { PrimengModule } from '../PrimeNg/primeng.module';
 
 @NgModule({
-    imports: [],
+    imports: [
+        PrimengModule
+    ],
     exports: [
         NavbarComponent
     ],
@@ -10,4 +13,4 @@ import { NavbarComponent } from './components/navbar/navbar.component';
         NavbarComponent
     ]
 })
-export class NameModule { }
+export class SharedModule { }

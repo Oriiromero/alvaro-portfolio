@@ -9,6 +9,7 @@ import { HomeComponent } from './main/home/home.component';
 import { ExperienceComponent } from './main/experience/experience.component';
 import { ProjectsComponent } from './main/projects/projects.component';
 import { ContactComponent } from './contact-section/pages/contact/contact.component';
+import { ContactSectionModule } from './contact-section/contact-section.module';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { ContactComponent } from './contact-section/pages/contact/contact.compon
     BrowserModule,
     AppRoutingModule,
     MainModule,
+    ContactSectionModule,
     BrowserAnimationsModule
   ],
   providers: [],

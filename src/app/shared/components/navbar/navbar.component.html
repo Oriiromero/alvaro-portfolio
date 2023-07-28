@@ -1,1 +1,19 @@
-<p>navbar works!</p>
+<nav
+  id="navbar"
+  class="flex flex-row justify-content-between align-items-center"
+>
+  <div class="logo">
+    <img src="/assets/letter-a.png" alt="logo" />
+  </div>
+  <ul class="list-group flex flex-row justify-content-around gap-6">
+    <!--TODO: verify de ngclass bc styles are affecting the text -->
+    <li
+      *ngFor="let item of items"
+      class="list-item"
+      [ngClass]="{ selected: id === item.name }"
+      (click)="activateLink(item.name)"
+    >
+      {{ item.name }}
+    </li>
+  </ul>
+</nav>
