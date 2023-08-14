@@ -12,6 +12,7 @@
       class="list-item"
       [ngClass]="{ selected: id === item.name }"
       (click)="activateLink(item.name)"
+      routerLink="{{item.url}}"
     >
       {{ item.name }}
     </li>

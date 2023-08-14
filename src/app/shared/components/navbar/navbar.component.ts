@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
 
   public items = [
-    {name: 'Home', url: 'home'},
-    {name: 'Experience', url: 'experience'},
-    {name: 'Projects', url: 'projects'},
+    {name: 'Home', url: '/home'},
+    {name: 'Experience', url: '/home'},
+    {name: 'Projects', url: '/home'},
     {name: 'Contact', url: '/contact'},
   ];
 
