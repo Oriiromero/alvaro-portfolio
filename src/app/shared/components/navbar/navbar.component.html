@@ -17,4 +17,23 @@
       {{ item.name }}
     </li>
   </ul>
+  <div class="burger" (click)="toggleMenu()">
+    <div class="burger-line"></div>
+    <div class="burger-line"></div>
+    <div class="burger-line"></div>
+  </div>
+  <div class="slide-menu" *ngIf="isToggle" [ngClass]="{'show-menu': isToggle}">
+    <ul class="menu-link">
+      <!--TODO: verify de ngclass bc styles are affecting the text -->
+      <li
+        *ngFor="let item of items"
+        class="link"
+        [ngClass]="{ selected: id === item.name }"
+        (click)="activateLinkMobile(item.name)"
+        routerLink="{{item.url}}"
+      >
+        {{ item.name }}
+      </li>
+    </ul>
+  </div>
 </nav>

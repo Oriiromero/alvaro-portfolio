@@ -15,8 +15,22 @@ export class NavbarComponent {
   ];
 
   public id: string = '';
+  public isToggle: boolean = false;
 
   activateLink = (id: string) => {
     this.id = id;
   }
+
+  activateLinkMobile(id: string) {
+    this.id = id;
+    this.isToggle = false;
+  }
+
+  toggleMenu(): void {
+
+    this.isToggle = !this.isToggle
+
+    console.log(this.isToggle)
+  }
+ 
 }
