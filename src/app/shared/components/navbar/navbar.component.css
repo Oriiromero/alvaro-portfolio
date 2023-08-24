@@ -26,6 +26,10 @@
     transition: 0.5s;
   }
 
+  .burger, .slide-menu{
+    display: none;
+  }
+
   .list-item:hover {
     color: #8cba51be;
   }
@@ -35,8 +39,9 @@
   }
 }
 
-@media screen and (max-width: 768px) and (min-width: 150px) {
+@media screen and (max-width: 500px) and (min-width: 150px) {
   #navbar {
+    width: 100vw;
     background-color: #0c0b0bda;
     height: 80px;
     box-shadow: 0px 4px 4px 0px #00000076;
@@ -108,4 +113,86 @@
     /* display: initial; */
   }
 
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 992px) {
+    #navbar {
+        width: 100vw;
+        background-color: #0c0b0bda;
+        height: 80px;
+        box-shadow: 0px 4px 4px 0px #00000076;
+        position: sticky;
+      }
+    
+      .logo {
+        width: 30px;
+        padding-left: 25px;
+      }
+    
+      .logo img {
+        width: 100%;
+      }
+    
+      .list-group,
+      .list-item {
+        display: none;
+      }
+    
+      .burger {
+        width: 50px;
+      }
+    
+      .burger-line {
+        background-color: white;
+        width: 20px;
+        height: 2px;
+        margin: 6px 0;
+      }
+    
+      /* TODO: VERIFICAR ANIMACION */
+      .slide-menu {
+        position: absolute;
+        top: 80px;
+        background-color: #0c0b0bda;
+        height: 100vh;
+        width: 400px;
+        transform: translateX(210%);
+        transition: transform 0.5s ease-in-out; 
+        visibility: hidden;
+        /* display: none; */
+        will-change: transform;
+      }
+    
+      .menu-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        padding-top: 90px;
+        height: 100vh;
+      }
+    
+      .link {
+        list-style: none;
+        font-family: "Turret Road", cursive;
+        color: #e9e8e8;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 55px 0;
+      }
+    
+      .show-menu {
+        transform: translateX(150%);
+        transition: transform 0.5s ease-in-out; 
+        visibility: visible;
+        /* display: initial; */
+      }
+    
+      body {
+        overflow-x: hidden;
+      }
 }
