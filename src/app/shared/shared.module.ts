@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { MainRoutingModule } from '../main/main-routing.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-    imports: [],
+    imports: [
+        CommonModule,
+        MainRoutingModule
+    ],
     exports: [
         NavbarComponent
     ],
@@ -10,4 +15,4 @@ import { NavbarComponent } from './components/navbar/navbar.component';
         NavbarComponent
     ]
 })
-export class NameModule { }
+export class SharedModule { }
